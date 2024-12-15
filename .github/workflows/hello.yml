@@ -1,0 +1,8 @@
+name: Hello   			#CI/CDワークフロー名
+on: push   			#イベント(イベントトリガー) ：push時に起動 []で複数定義可能
+jobs:      			#ジョブの定義 
+  hello:   			#ジョブID
+  runs-on: ubunts-latest	#ランナー (Ubuntsで実行)
+  steps:			#ステップの定義
+   - run: echo "Hello World"	#ランナーで実行する内容
+   - uses: actions/checkout@v4
